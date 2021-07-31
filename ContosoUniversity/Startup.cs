@@ -28,7 +28,7 @@ namespace ContosoUniversity
             services.AddRazorPages();
 
             services.AddDbContext<SchoolContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SchoolContext")));
+                    options.UseNpgsql(Configuration.GetConnectionString("SchoolContextPostgres")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
